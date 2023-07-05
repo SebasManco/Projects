@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables</title>
+</head>
+<body>
+
+    <p>Cart Quantity</p>
+    <button class="show" onclick="
+        showQuantity(cartQuantity)
+    ">Show Quantity</button>
+    <button class="plus" onclick="
+        cartQuantity += 2;
+        showQuantity(cartQuantity)
+    ">+2</button>
+    <button class="plus" onclick="
+        cartQuantity += 3;
+        showQuantity(cartQuantity)
+    ">+3</button>
+    <button class="add" onclick="
+        cartQuantity ++;
+        showQuantity(cartQuantity)
+    ">Add to cart</button>
+    <button class="reset" onclick="
+        cartQuantity = 0;
+        showQuantity(cartQuantity)
+    ">Reset cart</button>
+
+    <p class="js-show-quantity"></p>
+
+    <script>
+        cartQuantity = Number( localStorage.getItem('quantity') )
+        showQuantity(cartQuantity)
+        
+        // other ways to initialize variables 
+        const variable2 = 3; //constant that cannot change its value
+        var variable3 = 3;  // older way to declar a variable 
+
+        // let message = 'hello';
+        // console.log(typeof message);
+
+        function showQuantity(cartQuantity) {
+            let value = document.querySelector('.js-show-quantity')
+                .innerHTML = `Cart quantity: ${cartQuantity}`;       
+                
+            localStorage.setItem('quantity',cartQuantity)
+        }
+
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+@use "general" as g;
+
+header {
+  font-size: g.$font-size-1;
+  font-weight: 700;
+  padding: 2rem 1rem;
+
+  span {
+    color: g.$primary-color;
+  }
+}
+
+.menu {
+  border-radius: 2rem;
+  border: 2px solid #1c1852;
+  background-color: white;
+
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+
+  ul {
+    list-style: none;
+    padding: 2rem 3rem;
+    font-size: g.$font-size-0;
+    font-weight: 600;
+  }
+
+  .menu-item:link,
+  .menu-item:visited {
+    text-decoration: none;
+    color: #1e1b4b;
+  }
+}
+
+.menu--show {
+  height: 100svh;
+  width: 100svw;
+  transform: translate(0, 0);
+  z-index: 100;
+  inset: 0;
+  border: none;
+  border-radius: 0;
+
+  background-color: white;
+}
+
+.hero-section {
+  height: 100svh;
+  position: relative;
+  // background-color: lightblue;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 6.4rem;
+  }
+
+  .heading {
+    text-align: center;
+  }
+
+  .title {
+    font-size: g.$font-size-6;
+    line-height: 0.8;
+    color: g.$primary-color;
+
+    .subtitle {
+      font-size: g.$font-size-5;
+      color: #405057;
+    }
+  }
+
+  .subheading {
+    line-height: 1.5;
+    font-size: g.$font-size-1;
+    color: #868e96;
+  }
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: g.$primary-color;
+  height: 3px;
+}
+
+.hero-section .icon {
+  content: "";
+  position: absolute;
+  bottom: 1px;
+  right: 0;
+
+  opacity: 0.7;
+  width: 60%;
+  z-index: -1;
+}
+// --------------------------------------------------------//
+// ABOUT SECTION //
+// --------------------------------------------------------//
+
+.about-section {
+  margin: 9.6rem 0;
+  height: 70vh;
+  background-color: g.$primary-color;
+  width: min(95%, 123rem);
+  margin-inline: auto;
+  position: relative;
+  border-radius: 1.5rem;
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    position: absolute;
+  }
+
+  .img-container .about-img {
+    width: min(45%, 30rem);
+    border: 3px solid g.$white-color;
+    border-radius: 50%;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: g.$white-color;
+    width: 90%;
+    margin-inline: auto;
+
+    .title {
+      font-size: g.$font-size-4;
+    }
+    .text {
+      font-size: g.$font-size-0;
+      line-height: 1.5;
+    }
+  }
+}

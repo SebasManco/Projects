@@ -1,0 +1,50 @@
+// font sizes
+$font-size--1: clamp(1.28rem, -0.05vw + 1.3rem, 1.2rem);
+$font-size-0: clamp(1.6rem, 0vw + 1.6rem, 1.6rem);
+$font-size-1: clamp(2rem, 0.08vw + 1.97rem, 2.13rem);
+$font-size-2: clamp(2.5rem, 0.21vw + 2.43rem, 2.84rem);
+$font-size-3: clamp(3.13rem, 0.42vw + 2.99rem, 3.79rem);
+$font-size-4: clamp(3.91rem, 0.72vw + 3.68rem, 5.05rem);
+$font-size-5: clamp(4.88rem, 1.16vw + 4.51rem, 6.73rem);
+$font-size-6: clamp(6.1rem, 1.8vw + 5.53rem, 8.98rem);
+$primary-color: #3730a3;
+$white-color: #e0e7ff;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  padding-bottom: 3000px;
+}
+
+.menu-item--shown {
+  display: block;
+}
+
+.menu-item--mobile {
+  display: block;
+  padding: 2rem 3rem;
+  font-size: $font-size-0;
+  font-weight: 600;
+}
+.menu-item--hidden {
+  display: none;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.center-div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

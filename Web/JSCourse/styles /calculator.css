@@ -1,0 +1,13 @@
+.body {
+    display: grid;
+    width: 100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 4px;
+    row-gap: 17px;
+    margin-bottom: 17px;
+}
+
+.title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

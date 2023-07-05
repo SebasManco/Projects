@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timer app</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 0;
+      }
+      .timer {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        height: 400px;
+        margin-inline: auto;
+        font-size: 50px;
+        display: block;
+        text-align: center;
+        border-radius: 100%;
+        transition: box-shadow 0.5s;
+      }
+      .timer:hover {
+        border: 2px solid rgb(34, 34, 34);
+        cursor: pointer;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+      }
+      .btn {
+        width: 200px;
+        margin-inline: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>this is my first js project</h1>
+    <input type="number" name="" id="" class="timer" readonly value="0" />
+    <button class="btn start-button">Start</button>
+    <button class="btn stop-button">Stop</button>
+  </body>
+
+  <script>
+    let i = 1;
+
+    function Timer() {
+      let intervalo = setInterval(() => {
+        console.log(i);
+        i++;
+
+        if (i < 11) {
+          clearInterval(intervalo);
+        }
+      }, 2000);
+    }
+
+    let j = 0;
+    while (j < 10) {
+      Timer();
+      j++;
+      console.log("------");
+    }
+  </script>
+</html>

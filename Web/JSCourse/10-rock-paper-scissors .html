@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+    <link rel="stylesheet" href="styles /10-rock-paper-scissors.css">
+</head>
+<body>
+    <p class="title">Rock papers scisors</p>
+    <button onclick="
+        const computerMove = pickComputerMove();
+        console.log(computerMove);
+        playGame('rock',computerMove);
+
+    " class="move-button"><img src="images/rock-emoji.png" alt="" class="move-icon">
+    </button>
+    <button onclick="
+        const computerMove = pickComputerMove();
+        console.log(computerMove);
+        playGame('paper',computerMove);
+    " class="move-button">
+        <img src="images/paper-emoji.png" alt="" class="move-icon">
+    </button>
+    <button onclick="
+        const computerMove = pickComputerMove();
+        console.log(computerMove);
+        playGame('scissors',computerMove);
+    " class="move-button"><img src="images/scissors-emoji.png" alt="" class="move-icon">
+    </button>
+    
+    <p class="js-result result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score score"></p>
+    
+    <button onclick="
+        score.wins = 0;
+        score.loses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score')
+        updateScoreElement();
+    " class="reset-score-button">Reset score
+    </button>
+    
+    <script src="scripts/10-rock-paper-scissors.js"></script>
+</body>
+</html>

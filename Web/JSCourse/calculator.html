@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="styles /calculator.css">
+</head>
+<body>
+    <p class="title">Calculator</p>
+    <div class="body">
+        <button class="but" onclick="
+            calculation += '1';
+            console.log(calculation);   
+        ">1</button>
+        <button class="but" onclick="
+            calculation += '2';
+            console.log(calculation); 
+        ">2</button>
+        <button class="but" onclick="
+            calculation += '3';
+            console.log(calculation); 
+        ">3</button>
+        <button class="but" onclick="
+            calculation += ' + ';
+            console.log(calculation); 
+        ">+</button>
+        <button class="but" onclick="
+            calculation += '4';
+            console.log(calculation); 
+        ">4</button>
+        <button class="but" onclick="
+            calculation += '5';
+            console.log(calculation); 
+        ">5</button>
+        <button class="but" onclick="
+            calculation += '6';
+            console.log(calculation); 
+        ">6</button>
+        <button class="but" onclick="
+            calculation += ' - ';
+            console.log(calculation); 
+        ">-</button>
+        <button class="but" onclick="
+            calculation += '7';
+            console.log(calculation); 
+        ">7</button>
+        <button class="but" onclick="
+            calculation += '8';
+            console.log(calculation); 
+        ">8</button>
+        <button class="but" onclick="
+            calculation += '9';
+            console.log(calculation); 
+        ">9</button>
+        <button class="but">*</button>
+        <button class="but">0</button>
+        <button class="but">.</button>
+        <button class="but" onclick="
+            calculation = eval(calculation)
+            console.log(calculation)
+        ">=</button>
+        <button class="but">/</button>
+    </div>
+    <button class="but" onclick="
+        calculation = '';
+            console.log('Cleared') 
+    ">Clear</button>
+
+    <script>
+        let calculation = '';
+    </script>
+</body>
+</html>

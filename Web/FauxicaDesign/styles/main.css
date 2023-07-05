@@ -1,0 +1,234 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins";
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.wrapper header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  margin: 4em;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 4.1em;
+  margin: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  position: relative;
+}
+nav ul li a:before {
+  position: absolute;
+  content: "";
+  width: 0%;
+  height: 1px;
+  border-bottom: 2px solid rgb(134, 134, 134);
+  bottom: -6px;
+  transition: width 0.3s;
+}
+nav ul li a.active:before {
+  position: absolute;
+  content: "";
+  width: 35%;
+  height: 1px;
+  border-bottom: 2px solid black;
+  bottom: -8px;
+}
+
+main {
+  display: flex;
+  gap: 8em;
+  margin-top: 11em;
+}
+main .right-col {
+  flex-grow: 1;
+  display: grid;
+  gap: 2.3em;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas: "left right" "left bottom";
+}
+main .right-col .card {
+  background-color: lightblue;
+  border-radius: 0.8em;
+  padding: 1.1em;
+  display: flex;
+  align-items: end;
+  background-size: 150%;
+  transition: background-size 0.5s;
+}
+main .right-col .card .card-details {
+  background: white;
+  border-radius: 0.6em;
+  padding: 2em;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.5s;
+}
+main .right-col .card .card-details a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+main .right-col .card .card-details p {
+  font-size: 1.4rem;
+  margin: 0;
+}
+main .right-col .card .card-details .product-price {
+  font-size: 1.8rem-;
+}
+main .right-col .card:hover {
+  background-size: 160%;
+}
+main .right-col .card:hover .card-details {
+  transform: translateY(-20px);
+}
+main .right-col .card1 {
+  grid-area: left;
+  background-image: url("../images/clothing1.jpg");
+  position: relative;
+}
+main .right-col .card1:before {
+  position: absolute;
+  content: "";
+  background: url("../images/tag.svg") no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 20px;
+  left: -30px;
+  pointer-events: none;
+}
+main .right-col .card2 {
+  background-image: url("../images/clothing2.jpg");
+}
+main .right-col .card3 {
+  background-image: url("../images/clothing3.jpg");
+}
+main .left-col {
+  width: 45%;
+}
+main .left-col h1 {
+  font-size: 5.2rem;
+  font-family: "Playfair Display";
+  font-weight: normal;
+  margin: 0;
+}
+main .left-col .subhead {
+  font-size: 1.8rem;
+}
+main .left-col .cta-btns {
+  margin: 5em 0;
+}
+main .left-col .cta-btns, main .left-col .secondary-cta {
+  display: flex;
+  gap: 2em;
+}
+main .left-col .primary-cta {
+  background-color: #F1E2D1;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 1.9em;
+  padding: 1em 2em;
+  color: black;
+}
+main .left-col .primary-cta:hover {
+  background: #E2D1BD;
+}
+main .left-col .secondary-cta {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: black;
+  display: block;
+  padding: 1em 0;
+  align-items: center;
+}
+main .left-col .secondary-cta svg {
+  width: 20px;
+  transition: transform 0.3s;
+}
+main .left-col .secondary-cta:hover {
+  text-decoration: underline;
+}
+main .left-col .secondary-cta:hover svg {
+  transform: translateX(10px);
+}
+main .left-col .news {
+  display: flex;
+  gap: 3em;
+  padding: 5em;
+  border: 1px solid black;
+  border-radius: 0.8em;
+  position: relative;
+}
+main .left-col .news .employees {
+  font-size: 3.3rem;
+  margin: 0;
+  font-weight: 200;
+  line-height: 100%;
+}
+main .left-col .news .details {
+  font-size: 1.4rem;
+  margin: 0;
+}
+main .left-col .news:before {
+  position: absolute;
+  content: "";
+  background: url("../images/confetti.svg");
+  width: 100px;
+  height: 100px;
+  top: -20px;
+  left: -20px;
+  z-index: 2;
+}
+
+nav ul li a:hover:before {
+  width: 35%;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 999;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  animation: reveal 1s ease-in forwards;
+  transform-origin: bottom;
+}
+
+@keyframes reveal {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+main {
+  animation: growIn 2s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+  transform: scale(0.4);
+}
+
+@keyframes growIn {
+  to {
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=main.css.map */
